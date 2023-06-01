@@ -1,0 +1,131 @@
+.contacts__sub {
+  // @extend .section;
+  background-color: #191c26;
+
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 480px) {
+    background-image: url("../images/contacts/cont_sm@1x.webp");
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url("../images/contacts/cont_sm@2x.webp");
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 1279px) {
+    background-image: url("../images/contacts/cont_md@1x.webp");
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url("../images/contacts/cont_md@2x.webp");
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: url("../images/contacts/cont_lg@1x.webp");
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url("../images/contacts/cont_lg@2x.webp");
+    }
+
+    // margin-right: auto;
+    width: calc(100vw / 2 - 10px);
+  }
+}
+
+.contacts__container {
+  @extend .container;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-left: 100px;
+  }
+}
+
+// --------------- Address
+.contacts__main {
+  @media screen and (min-width: 768px) {
+    width: 330px;
+  }
+}
+
+.contacts__title {
+  @extend .section__title;
+  margin-top: 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.address__list {
+  list-style: none;
+  margin-top: 40px;
+}
+
+// --------------- Worktime
+
+.contacts__time {
+  @media screen and (max-width: 767px) {
+    margin-top: 44px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 330px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 64px;
+  }
+}
+
+.contacts__label {
+  @extend .label;
+  color: $color-bcg;
+}
+
+.contacts__label::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+  display: inline-block;
+  background-color: rgba(157, 164, 189, 0.6);
+}
+
+.address__item {
+  
+  margin-top: 20px;
+  
+}
+
+.address__link {
+  display: flex;
+    align-items: center;
+    font-size: 18px;
+      letter-spacing: 0.02em;
+      color: #9da4bd;
+  text-decoration: none;
+}
+
+.contacts__icon {
+  @extend .icon;
+  margin-right: 16px;
+}
+
+.contacts__worktime {
+  margin-top: 20px;
+  font-size: 18px;
+    letter-spacing: 0.02em;
+    color: #9da4bd;
+}

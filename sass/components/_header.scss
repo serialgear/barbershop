@@ -1,0 +1,125 @@
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 100;
+}
+
+.page-header__container {
+  @extend .container;
+  position: relative;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 0px 50px;
+
+    display: flex;
+    align-items: center;
+  }
+}
+
+.logo__link {
+  display: inline-block;
+  color: $color-bcg;
+  transition: color $duration $timing-function;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-accent;
+  }
+}
+
+.black {
+  @media screen and (min-width: 768px) {
+    color: $color-primary;
+  }
+}
+
+nav {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin-left: 60px;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 16px;
+
+  @media screen and (min-width: 1280px) {
+    margin-left: 40px;
+  }
+}
+
+.nav__link {
+  display: block;
+  padding-top: 52px;
+  padding-bottom: 52px;
+  text-decoration: none;
+  color: $color-bcg;
+  transition: color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+
+.page-header__phone {
+  @extend .nav__link;
+  margin-left: auto;
+
+  @media screen and (max-width: 1279px) {
+    display: none;
+  }
+}
+
+.mobile-menu-button {
+  position: absolute;
+  padding: 0;
+  top: 46px;
+  right: 39px;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.button-order--header {
+  @extend %button;
+
+  color: $color-bcg;
+
+  transition: background-color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-left: 40px;
+  }
+}

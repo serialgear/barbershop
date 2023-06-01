@@ -1,0 +1,110 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  z-index: 200;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity $duration $timing-function;
+}
+
+.is-open {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 337px;
+  height: 100vh;
+  padding: 50px 41px;
+  background-color: $color-bcg;
+  transform: translateX(100%);
+  transition: transform 300ms linear;
+
+  .backdrop.is-open & {
+    transform: translateX(0);
+  }
+}
+
+.mob-nav__list {
+  margin-top: 40px;
+  list-style: none;
+}
+
+.mob-nav__item:not(:first-child) {
+  margin-top: 24px;
+}
+
+.mob-nav__link {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: $color-primary;
+  transition: color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+
+.mob-menu__cont {
+  display: inline-block;
+  margin-top: 64px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: $color-primary;
+  text-decoration: none;
+  transition: color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+
+.button-order--mob {
+  @extend %button;
+  margin-top: 24px;
+  color: #303030;
+
+  transition: color $duration $timing-function,
+    background-color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+    color: $color-bcg;
+  }
+}
+
+.social__list--mob {
+  @extend .social__list;
+  margin-top: 64px;
+  flex-direction: column;
+}
+
+.social__link--mob {
+  @extend .social__link;
+  font-size: 14px;
+}
+
+.social__item--mob {
+  @extend .social__item;
+}
+
+.social__item--mob:not(:first-child) {
+  margin-top: 24px;
+  margin-left: 60px;
+}
